@@ -1,200 +1,345 @@
 import Image from "next/image";
 
 export default function Home() {
-  const reputation = 92;
-
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
 
-      {/* BACKGROUND EFFECT */}
-      <div className="absolute inset-0 bg-gradient-to-b from-red-950/40 via-black to-black pointer-events-none" />
+      {/* BACKGROUND */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_top,rgba(255,0,0,0.18),transparent_60%)] pointer-events-none" />
 
-      {/* HERO SECTION */}
-      <section className="relative flex flex-col items-center justify-center text-center px-6 py-24">
+      {/* HERO */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6">
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,0,0,0.25),transparent_60%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-red-950/20 via-black to-black" />
 
-        <Image
-          src="/gurram-jashua.png"
-          alt="Gurram Jashua"
-          width={500}
-          height={500}
-          className="relative rounded-3xl border-4 border-red-600 shadow-[0_0_80px_rgba(255,0,0,0.4)]"
-        />
+        <div className="relative z-10">
 
-        <h1 className="relative mt-10 text-6xl md:text-8xl font-black tracking-widest text-red-600">
-          GURRAM JASHUA
-        </h1>
+          <div className="inline-block border border-red-700 text-red-400 px-5 py-2 rounded-full tracking-[4px] uppercase text-sm mb-8">
+            Classified Archive
+          </div>
 
-        <p className="relative mt-6 text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed">
-          The man the city fears after midnight.
-          Street legend. Underground operator.
-          A shadow moving through Los Santos while sirens echo in the distance.
-        </p>
+          <h1 className="text-6xl md:text-8xl font-black uppercase tracking-[6px] text-red-600">
+            Humane Labs
+          </h1>
 
-        <button className="relative mt-10 px-10 py-5 bg-red-700 hover:bg-red-800 transition-all duration-300 rounded-full text-xl font-bold shadow-[0_0_30px_rgba(255,0,0,0.5)]">
-          ENTER THE UNDERWORLD
-        </button>
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-gray-300">
+            The Chronicles
+          </h2>
+
+          <p className="mt-8 max-w-4xl text-xl text-gray-400 leading-relaxed">
+            Secret experiments. Underground organizations.
+            Government coverups. Biological reconstruction.
+            The truth buried beneath Los Santos.
+          </p>
+
+          <div className="mt-12">
+            <Image
+              src="/gurram-jashua.png"
+              alt="Gurram Jashua"
+              width={420}
+              height={420}
+              className="rounded-3xl border-4 border-red-700 shadow-[0_0_80px_rgba(255,0,0,0.45)] mx-auto"
+            />
+          </div>
+
+        </div>
       </section>
 
-      {/* STREET REPUTATION */}
-      <section className="relative max-w-4xl mx-auto px-6 py-20">
+      {/* CITY STATUS */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
 
-        <h2 className="text-5xl font-black text-center text-red-500 mb-10">
-          STREET REPUTATION
+        <h2 className="text-5xl font-black text-center text-red-500 mb-14">
+          CITY STATUS
         </h2>
 
-        <div className="bg-zinc-900 border border-red-800 rounded-full h-10 overflow-hidden shadow-lg">
-          <div
-            className="bg-gradient-to-r from-red-700 to-red-500 h-full transition-all duration-1000"
-            style={{ width: `${reputation}%` }}
-          />
-        </div>
+        <div className="grid md:grid-cols-3 gap-8">
 
-        <div className="text-center mt-6">
-          <span className="text-4xl font-extrabold text-red-400">
-            {reputation}%
-          </span>
+          <div className="bg-zinc-950 border border-red-900 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-red-400">
+              BLACK MANIACS
+            </h3>
 
-          <p className="mt-4 text-gray-400 text-lg">
-            Current Status:
-            <span className="text-red-500 font-bold">
-              {" "}
-              HIGHLY WANTED
-            </span>
-          </p>
+            <p className="mt-6 text-green-400 text-xl font-bold">
+              ACTIVE
+            </p>
+
+            <p className="mt-4 text-gray-400">
+              Underground operations expanding through Los Santos.
+            </p>
+          </div>
+
+          <div className="bg-zinc-950 border border-red-900 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-red-400">
+              HELL BOYS
+            </h3>
+
+            <p className="mt-6 text-red-500 text-xl font-bold">
+              HIGH THREAT
+            </p>
+
+            <p className="mt-4 text-gray-400">
+              Criminal activity increasing across city sectors.
+            </p>
+          </div>
+
+          <div className="bg-zinc-950 border border-red-900 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-red-400">
+              HUMANE LABS
+            </h3>
+
+            <p className="mt-6 text-yellow-400 text-xl font-bold">
+              FILES LEAKED
+            </p>
+
+            <p className="mt-4 text-gray-400">
+              Underground sectors remain partially undiscovered.
+            </p>
+          </div>
+
         </div>
       </section>
 
-      {/* CHARACTER PROFILE */}
-      <section className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 py-20">
+      {/* CHARACTER DATABASE */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
 
-        <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-10 shadow-2xl">
-          <h2 className="text-4xl font-black text-red-500 mb-8">
-            CHARACTER PROFILE
-          </h2>
+        <h2 className="text-5xl font-black text-center text-red-500 mb-16">
+          CHARACTER DATABASE
+        </h2>
 
-          <div className="space-y-6 text-lg text-gray-300">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div className="flex justify-between border-b border-zinc-800 pb-3">
-              <span>Name</span>
-              <span className="text-red-400">Gurram Jashua</span>
+          {/* GURRAM */}
+          <div className="bg-zinc-950 border border-red-900 rounded-3xl p-8 hover:scale-105 transition-all">
+
+            <h3 className="text-3xl font-black text-red-400">
+              GURRAM JASHUA
+            </h3>
+
+            <div className="mt-6 space-y-4 text-gray-300">
+
+              <p>
+                <span className="text-red-500">Status:</span> Active
+              </p>
+
+              <p>
+                <span className="text-red-500">Threat:</span> Extreme
+              </p>
+
+              <p>
+                <span className="text-red-500">Affiliation:</span> Black Maniacs
+              </p>
+
+              <p>
+                Experimental biological reconstruction survivor.
+              </p>
+
             </div>
+          </div>
 
-            <div className="flex justify-between border-b border-zinc-800 pb-3">
-              <span>Occupation</span>
-              <span className="text-red-400">Underground Operator</span>
-            </div>
+          {/* SPIDER */}
+          <div className="bg-zinc-950 border border-red-900 rounded-3xl p-8 hover:scale-105 transition-all">
 
-            <div className="flex justify-between border-b border-zinc-800 pb-3">
-              <span>Affiliation</span>
-              <span className="text-red-400">Independent</span>
-            </div>
+            <h3 className="text-3xl font-black text-red-400">
+              SPIDER REDDY
+            </h3>
 
-            <div className="flex justify-between border-b border-zinc-800 pb-3">
-              <span>Status</span>
-              <span className="text-red-400">Active</span>
-            </div>
+            <div className="mt-6 space-y-4 text-gray-300">
 
-            <div className="flex justify-between border-b border-zinc-800 pb-3">
-              <span>City</span>
-              <span className="text-red-400">Los Santos</span>
+              <p>
+                <span className="text-red-500">Status:</span> Investigating
+              </p>
+
+              <p>
+                <span className="text-red-500">Threat:</span> Unknown
+              </p>
+
+              <p>
+                <span className="text-red-500">Ability:</span> Enhanced Instincts
+              </p>
+
+              <p>
+                Exposed to Humane Labs experimental chemicals.
+              </p>
+
             </div>
+          </div>
+
+          {/* LEONARDO */}
+          <div className="bg-zinc-950 border border-red-900 rounded-3xl p-8 hover:scale-105 transition-all">
+
+            <h3 className="text-3xl font-black text-red-400">
+              LEONARDO RIO
+            </h3>
+
+            <div className="mt-6 space-y-4 text-gray-300">
+
+              <p>
+                <span className="text-red-500">Status:</span> Unknown
+              </p>
+
+              <p>
+                <span className="text-red-500">Threat:</span> Catastrophic
+              </p>
+
+              <p>
+                <span className="text-red-500">Affiliation:</span> Hell Boys Legacy
+              </p>
+
+              <p>
+                Mastermind behind the Humane Labs conspiracies.
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* FACTIONS */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+
+        <h2 className="text-5xl font-black text-center text-red-500 mb-16">
+          FACTIONS
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-10">
+
+          {/* BLACK MANIACS */}
+          <div className="bg-gradient-to-br from-zinc-950 to-black border border-green-700 rounded-3xl p-10">
+
+            <h3 className="text-4xl font-black text-green-400">
+              BLACK MANIACS
+            </h3>
+
+            <p className="mt-8 text-gray-300 text-lg leading-relaxed">
+              Built on loyalty, survival, protection, and brotherhood.
+              Operating through Black Wolf Customs beneath Los Santos.
+            </p>
+
+            <ul className="mt-8 space-y-3 text-gray-400 text-lg">
+              <li>• Underground Operations</li>
+              <li>• Racing Networks</li>
+              <li>• Protection Systems</li>
+              <li>• Black Market Connections</li>
+            </ul>
 
           </div>
-        </div>
 
-        {/* LORE */}
-        <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-10 shadow-2xl">
-          <h2 className="text-4xl font-black text-red-500 mb-8">
-            BACKSTORY
-          </h2>
+          {/* HELL BOYS */}
+          <div className="bg-gradient-to-br from-zinc-950 to-black border border-red-700 rounded-3xl p-10">
 
-          <p className="text-lg text-gray-300 leading-loose">
-            Nobody knows where Gurram Jashua came from.
-            Some claim he arrived in Los Santos with nothing but a duffel bag
-            and a reputation already written in blood.
-          </p>
+            <h3 className="text-4xl font-black text-red-500">
+              HELL BOYS
+            </h3>
 
-          <p className="text-lg text-gray-300 leading-loose mt-6">
-            As the city descended into chaos, his name spread through the streets,
-            whispered in clubs, alleyways, and police radio chatter.
-          </p>
+            <p className="mt-8 text-gray-300 text-lg leading-relaxed">
+              A criminal empire rebuilt from the ashes of old networks.
+              Feared across Los Santos for violence and control.
+            </p>
 
-          <p className="text-lg text-gray-300 leading-loose mt-6">
-            One thing became clear:
-            crossing paths with Gurram Jashua never ends quietly.
-          </p>
+            <ul className="mt-8 space-y-3 text-gray-400 text-lg">
+              <li>• Armed Robberies</li>
+              <li>• Underground Trafficking</li>
+              <li>• Extortion Operations</li>
+              <li>• Tactical Assassinations</li>
+            </ul>
+
+          </div>
+
         </div>
       </section>
 
       {/* TIMELINE */}
-      <section className="relative px-6 py-20 max-w-5xl mx-auto">
+      <section className="max-w-5xl mx-auto px-6 py-20">
 
         <h2 className="text-5xl font-black text-center text-red-500 mb-16">
-          RP TIMELINE
+          INCIDENT TIMELINE
         </h2>
 
         <div className="space-y-10">
 
-          <div className="border-l-4 border-red-600 pl-6">
-            <h3 className="text-2xl font-bold text-red-400">
-              2023 — Arrival
+          <div className="border-l-4 border-red-700 pl-8">
+            <h3 className="text-3xl font-bold text-red-400">
+              HUMANE LABS ERA
             </h3>
 
-            <p className="text-gray-400 mt-2">
-              Entered Los Santos and began building underground connections.
+            <p className="mt-4 text-gray-400 text-lg">
+              Illegal biological research begins beneath Los Santos.
             </p>
           </div>
 
-          <div className="border-l-4 border-red-600 pl-6">
-            <h3 className="text-2xl font-bold text-red-400">
-              2024 — Street Influence
+          <div className="border-l-4 border-red-700 pl-8">
+            <h3 className="text-3xl font-bold text-red-400">
+              THE BIGGEST ROBBERY
             </h3>
 
-            <p className="text-gray-400 mt-2">
-              Expanded operations throughout the city and gained notoriety.
+            <p className="mt-4 text-gray-400 text-lg">
+              Jesús Marquina attacks Humane Labs. Government coverup follows.
             </p>
           </div>
 
-          <div className="border-l-4 border-red-600 pl-6">
-            <h3 className="text-2xl font-bold text-red-400">
-              2025 — Most Wanted
+          <div className="border-l-4 border-red-700 pl-8">
+            <h3 className="text-3xl font-bold text-red-400">
+              THE CREATION OF GURRAM
             </h3>
 
-            <p className="text-gray-400 mt-2">
-              Became one of the most feared names in ATRP.
+            <p className="mt-4 text-gray-400 text-lg">
+              Ethan Jashua survives unauthorized biological reconstruction.
+            </p>
+          </div>
+
+          <div className="border-l-4 border-red-700 pl-8">
+            <h3 className="text-3xl font-bold text-red-400">
+              BLACK MANIACS RISE
+            </h3>
+
+            <p className="mt-4 text-gray-400 text-lg">
+              Underground factions divide Los Santos forever.
             </p>
           </div>
 
         </div>
       </section>
 
-      {/* QUOTE SECTION */}
-      <section className="relative py-24 text-center px-6">
+      {/* CLASSIFIED FILE */}
+      <section className="max-w-5xl mx-auto px-6 py-24">
 
-        <div className="max-w-4xl mx-auto bg-zinc-950 border border-red-900 rounded-3xl p-12 shadow-2xl">
+        <div className="bg-zinc-950 border border-red-900 rounded-3xl p-12 shadow-[0_0_50px_rgba(255,0,0,0.15)]">
 
-          <p className="text-3xl md:text-5xl italic text-gray-200 leading-relaxed">
-            “Trust nobody after midnight.”
+          <div className="text-red-500 tracking-[5px] uppercase text-sm">
+            Restricted Access
+          </div>
+
+          <h2 className="mt-6 text-5xl font-black text-red-400">
+            CLASSIFIED REPORT
+          </h2>
+
+          <p className="mt-10 text-gray-300 text-xl leading-loose">
+            Remaining underground sectors beneath Humane Labs continue to show
+            signs of abandoned experimental activity.
           </p>
 
-          <p className="mt-8 text-red-500 text-xl font-bold">
-            — Gurram Jashua
+          <p className="mt-6 text-gray-300 text-xl leading-loose">
+            Multiple witnesses claim sightings of unknown figures operating
+            beneath the city after midnight.
+          </p>
+
+          <p className="mt-6 text-red-500 text-2xl font-bold">
+            STATUS: INVESTIGATION ACTIVE
           </p>
 
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="relative border-t border-zinc-900 py-10 text-center text-gray-500">
+      <footer className="border-t border-zinc-900 py-10 text-center text-gray-500">
 
         <p className="text-lg">
-          Gurram Jashua • ATRP Character Profile
+          Humane Labs Chronicles • Classified Archive
         </p>
 
         <p className="mt-2 text-sm">
-          FiveM Roleplay Universe
+          FiveM ATRP Universe
         </p>
 
       </footer>
