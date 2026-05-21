@@ -1,166 +1,89 @@
+import Image from "next/image";
+
 export default function Home() {
+  const horseEnergy = 97;
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-slate-900 to-red-950 text-white overflow-hidden">
+    <main className="min-h-screen bg-black text-white flex flex-col items-center px-6 py-16">
+      
+      {/* HERO IMAGE */}
+      <Image
+        src="/gurram-jashua.png"
+        alt="Gurram Jashua"
+        width={500}
+        height={500}
+        className="rounded-3xl border-4 border-red-500 shadow-2xl shadow-red-500"
+      />
 
-      {/* HERO SECTION */}
-      <section className="flex flex-col items-center justify-center text-center px-6 py-24">
+      {/* TITLE */}
+      <h1 className="text-6xl md:text-8xl font-extrabold text-red-500 mt-10 text-center">
+        GURRAM JASHUA
+      </h1>
 
-        <img
-          src="/gurram-jashua.png"
-          alt="Gurram Jashua"
-          className="w-72 rounded-3xl shadow-2xl border-4 border-red-500 mb-8 hover:scale-105 transition-all"
-        />
+      {/* DESCRIPTION */}
+      <p className="text-center text-xl md:text-2xl text-gray-300 mt-6 max-w-4xl leading-relaxed">
+        The legendary horse-mask meme king who dances under moonlight,
+        destroys the internet with goofy dance moves, and spreads maximum
+        horse energy 🐴🔥
+      </p>
 
-        <h1 className="text-6xl md:text-8xl font-black text-red-500 drop-shadow-lg">
-          GURRAM JASHUA
-        </h1>
+      {/* BUTTON */}
+      <button className="mt-10 bg-red-500 hover:bg-red-600 transition-all duration-300 px-10 py-5 rounded-full text-2xl font-bold shadow-lg shadow-red-500/50">
+        Join The Meme Army
+      </button>
 
-        <p className="mt-6 text-xl text-gray-300 max-w-2xl leading-8">
-          The legendary horse-mask meme king who dances under moonlight,
-          destroys the internet with goofy dance moves,
-          and spreads maximum horse energy 🐴🔥
+      {/* HORSE ENERGY METER */}
+      <section className="mt-20 w-full max-w-3xl">
+        <h2 className="text-5xl font-extrabold text-center text-yellow-400 mb-8">
+          HORSE ENERGY METER ⚡🐴
+        </h2>
+
+        <div className="bg-gray-800 rounded-full h-10 overflow-hidden border-4 border-yellow-400">
+          <div
+            className="bg-yellow-400 h-full transition-all duration-1000"
+            style={{ width: `${horseEnergy}%` }}
+          />
+        </div>
+
+        <p className="text-center text-3xl font-bold mt-6 text-yellow-300">
+          {horseEnergy}% MAXIMUM HORSE ENERGY
         </p>
 
-        <button className="mt-10 bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full text-xl font-bold shadow-xl hover:scale-110 transition-all">
-          Join The Meme Army
-        </button>
-      </section>
-
-      {/* ABOUT */}
-      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
-
-        <div>
-          <h2 className="text-5xl font-extrabold text-red-400 mb-8">
-            Who Is Gurram Jashua?
-          </h2>
-
-          <p className="text-lg text-gray-300 leading-8">
-            Nobody knows where he came from.
-            Some say he escaped from a secret dance laboratory.
-            Others believe he was born during a full moon while TikTok music played in the background.
-          </p>
-
-          <ul className="mt-8 space-y-4 text-xl">
-            <li>🐴 Horse power level: MAXIMUM</li>
-            <li>🕺 Dancing skills: Illegal in 12 countries</li>
-            <li>🍕 Can smell pizza from 20km away</li>
-            <li>💀 Meme energy overload</li>
-          </ul>
-        </div>
-
-        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/10 shadow-2xl">
-
-          <div className="text-7xl text-center">
-            🐴
-          </div>
-
-          <h3 className="text-3xl font-bold text-center text-red-400 mt-6">
-            Official Status
-          </h3>
-
-          <div className="mt-8 bg-black/40 rounded-2xl p-6">
-            <p className="text-green-400 font-mono">
-              STATUS:
-            </p>
-
-            <p className="mt-4 text-lg">
-              Currently moonwalking through the internet.
-            </p>
-          </div>
+        <div className="text-center mt-4 text-xl text-gray-300">
+          Current Status:
+          <span className="text-green-400 font-bold">
+            {" "}
+            DANCING TOO HARD 🔥
+          </span>
         </div>
       </section>
 
-      {/* MEME MOVES */}
-      <section className="bg-black/30 py-20 px-6">
-
-        <h2 className="text-5xl font-extrabold text-center text-red-400 mb-16">
-          Legendary Dance Moves
+      {/* ABOUT SECTION */}
+      <section className="mt-24 max-w-5xl text-center">
+        <h2 className="text-5xl font-extrabold text-red-400 mb-8">
+          Who Is Gurram Jashua?
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <p className="text-xl text-gray-300 leading-loose">
+          Nobody knows where he came from. Some say he escaped from a secret
+          dance laboratory. Others believe he was born during a full moon while
+          TikTok music played in the background.
+        </p>
 
-          <div className="bg-white/10 rounded-3xl p-8 border border-white/10 hover:scale-105 transition-all">
-            <div className="text-6xl mb-4">🔥</div>
-
-            <h3 className="text-2xl font-bold text-red-300 mb-4">
-              Ultra Horse Dab
-            </h3>
-
-            <p className="text-gray-300">
-              Scientists still cannot explain this dangerous movement.
-            </p>
-          </div>
-
-          <div className="bg-white/10 rounded-3xl p-8 border border-white/10 hover:scale-105 transition-all">
-            <div className="text-6xl mb-4">🌙</div>
-
-            <h3 className="text-2xl font-bold text-red-300 mb-4">
-              Midnight Wiggle
-            </h3>
-
-            <p className="text-gray-300">
-              Causes random people nearby to start dancing uncontrollably.
-            </p>
-          </div>
-
-          <div className="bg-white/10 rounded-3xl p-8 border border-white/10 hover:scale-105 transition-all">
-            <div className="text-6xl mb-4">💀</div>
-
-            <h3 className="text-2xl font-bold text-red-300 mb-4">
-              Turbo Knee Shuffle
-            </h3>
-
-            <p className="text-gray-300">
-              Banned from professional competitions worldwide.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* REVIEWS */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
-
-        <h2 className="text-5xl font-extrabold text-center text-red-400 mb-16">
-          Internet Reviews
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-8">
-
-          <div className="bg-gradient-to-br from-red-500/20 to-black rounded-3xl p-8">
-            <p className="text-xl italic">
-              “I laughed so hard I forgot my WiFi password.”
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-red-500/20 to-black rounded-3xl p-8">
-            <p className="text-xl italic">
-              “This horse changed my life forever.”
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-red-500/20 to-black rounded-3xl p-8">
-            <p className="text-xl italic">
-              “Why is he dancing like that? 10/10.”
-            </p>
-          </div>
-
-        </div>
+        <p className="text-xl text-gray-300 leading-loose mt-6">
+          One thing is certain:
+          <span className="text-red-400 font-bold">
+            {" "}
+            when Gurram Jashua starts dancing...
+          </span>{" "}
+          the internet loses control.
+        </p>
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 py-10 text-center text-gray-400">
-
-        <p className="text-lg">
-          © 2026 Gurram Jashua Meme Universe 🐴
-        </p>
-
-        <p className="mt-2 text-sm">
-          Warning: Excessive exposure may cause uncontrollable dancing.
-        </p>
-
+      <footer className="mt-24 text-gray-500 text-lg">
+        Made with 🐴🔥 by the Gurram Jashua Meme Army
       </footer>
-
-    </div>
+    </main>
   );
 }
